@@ -33,6 +33,10 @@ Run these commands in order:
 9. Create .env.example
 10. Create vercel.json with cron job definitions
 Verify: pnpm dev runs without errors"
+
+IMPORTANT: Add these to .gitignore (Next.js does this automatically, verify):
+.env.local
+proxy/.env
 ```
 
 ### Session 2 — Database Schema
@@ -452,6 +456,33 @@ Build: Full needs analysis form for agents to run with clients,
 ### Session 22 — Quote Management (Agent Portal)
 ```
 Build: Agent quote builder, send to client, quote list, version history
+```
+
+### Session 22b — Forms Library Integration
+```
+Prompt: "Read CLAUDE.md and skills/protecwise-forms/SKILL.md.
+Build the complete forms library integration:
+
+app/agent/forms/page.tsx              — full-page iframe embed with loading + fallback
+components/forms/FormsLibraryFallback.tsx — fallback component when iframe fails
+app/api/agent/forms/iframe-failure/route.ts — logs failure + notifies admin
+app/api/agent/applications/[id]/forms-status/route.ts — updates forms status
+
+Also add to agent application detail (/agent/applications/[applicationId]):
+- Forms Execution section with status dropdown
+- Forms Status history (opened_at, sent_at, submitted_at timestamps)
+- 'Open Forms Library' button → modal sheet with iframe
+- Forms tracking displays on client-facing application detail (/client/applications/[id])
+
+Forms URL from env: NEXT_PUBLIC_COMPULIFE_FORMS_URL
+ID=1354 is ProtecWise's account — never change this parameter.
+
+Verify:
+- iframe loads at /agent/forms
+- Fallback shows and direct link works when iframe errors
+- Failure is logged to activity_log
+- Forms status updates save and display timestamps
+- Mobile shows direct link instead of iframe at < 768px"
 ```
 
 ### Session 23 — Task Management
