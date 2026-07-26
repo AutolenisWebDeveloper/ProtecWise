@@ -1,0 +1,13 @@
+{
+  "name": "protecwise-compulife-proxy",
+  "version": "1.0.0",
+  "description": "Fixed-IP proxy for CompuLife API calls (runs on the registered GCP host)",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "COMPULIFE_AUTH_ID=66b12312b PROXY_SECRET=dev-secret node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
