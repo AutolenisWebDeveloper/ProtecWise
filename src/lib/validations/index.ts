@@ -7,3 +7,4 @@ export * from './auth';
 export * from './quote';
 export * from './lead';
 export * from './needs-calculator';
+export * from './contact';
