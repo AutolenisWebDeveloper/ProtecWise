@@ -191,11 +191,12 @@ All tables have RLS enabled. All writes go through typed API routes.
 ## ENVIRONMENT VARIABLES
 
 ```bash
-# CompuLife
-COMPULIFE_PROXY_URL=
-COMPULIFE_AUTH_ID=
-COMPULIFE_MONTHLY_QUOTE_SOFT_LIMIT=500
-COMPULIFE_MONTHLY_QUOTE_HARD_LIMIT=1000
+# CompuLife (see COMPULIFE_SETUP.md — registered IP 34.16.56.64)
+COMPULIFE_PROXY_URL=http://34.16.56.64:3001
+COMPULIFE_AUTH_ID=                       # proxy-side only, never in the app
+COMPULIFE_REGISTERED_IP=34.16.56.64
+COMPULIFE_MONTHLY_QUOTE_SOFT_LIMIT=1000
+COMPULIFE_MONTHLY_QUOTE_HARD_LIMIT=1150
 
 # Supabase
 NEXT_PUBLIC_SUPABASE_URL=
@@ -236,10 +237,10 @@ SENTRY_DSN=
 
 ```
 [ ] Phase 1 — Foundation
-    [ ] Project init + packages
-    [ ] Database migrations (all tables)
-    [ ] Supabase config (auth, storage, RLS)
-    [ ] Core lib (supabase, auth, types)
+    [x] Project init + packages
+    [x] Database migrations (all tables)         ← Session 2 (001–031, 29 tables, RLS, indexes, views)
+    [~] Supabase config (auth, storage, RLS)     ← RLS policies done; auth/storage config pending
+    [ ] Core lib (supabase, auth, types)         ← types generated (src/types/supabase.ts + index.ts)
     [ ] Middleware (RBAC)
     [ ] Shared layout components
     [ ] Design system (brand colors, typography)
