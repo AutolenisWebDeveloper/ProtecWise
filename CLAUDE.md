@@ -236,10 +236,10 @@ SENTRY_DSN=
 
 ```
 [ ] Phase 1 — Foundation
-    [ ] Project init + packages
-    [ ] Database migrations (all tables)
-    [ ] Supabase config (auth, storage, RLS)
-    [ ] Core lib (supabase, auth, types)
+    [x] Project init + packages
+    [x] Database migrations (all tables)         ← Session 2 (001–031, 29 tables, RLS, indexes, views)
+    [~] Supabase config (auth, storage, RLS)     ← RLS policies done; auth/storage config pending
+    [ ] Core lib (supabase, auth, types)         ← types generated (src/types/supabase.ts + index.ts)
     [ ] Middleware (RBAC)
     [ ] Shared layout components
     [ ] Design system (brand colors, typography)
