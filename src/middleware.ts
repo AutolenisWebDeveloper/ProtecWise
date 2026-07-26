@@ -35,6 +35,12 @@ const PROTECTED: Array<{ prefix: string; allow: Role[]; login: string }> = [
 ];
 
 export async function middleware(request: NextRequest) {
+  // If Supabase isn't configured (e.g. local dev without env), don't crash —
+  // skip auth. In production the env is always set, so gating still applies.
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return NextResponse.next({ request });
+  }
+
   const { supabase, response } = createMiddlewareSupabase(request);
 
   // Refresh the session (also populates the auth cookie on `response`).
