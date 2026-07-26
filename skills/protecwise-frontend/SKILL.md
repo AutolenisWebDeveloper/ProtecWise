@@ -277,5 +277,5 @@ Before finishing any UI component or page, check:
 - [ ] Does it work at 375px?
 - [ ] Is the copy direct and specific, not generic?
 - [ ] Does it have a loading state, empty state, and error state?
-- [ ] Is the logo at /public/protecwiselogo.jpg with proper alt text?
+- [ ] Is the logo at /public/protecwiselogo.png with proper alt text?
 - [ ] Do animated elements respect prefers-reduced-motion?

@@ -144,7 +144,7 @@ app/(public)/contact/page.tsx
 app/(public)/privacy/page.tsx
 app/(public)/terms/page.tsx
 
-Brand: #1B3D8B navy, #4AAE2E green, logo at /public/protecwiselogo.jpg
+Brand: #1B3D8B navy, #4AAE2E green, logo at /public/protecwiselogo.png
 Hero headline: 'Protecting What' then 'Matters Most' (green)
 Verify: All 9 pages render, links work, mobile at 375px"
 ```

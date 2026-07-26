@@ -46,7 +46,7 @@ Testing:          Vitest (unit) + Playwright (E2E)
 --brand-green-tint:  #EBF6E5;
 --brand-blue-tint:   #EDF5FC;
 ```
-Logo file: `/public/protecwiselogo.jpg` — always use this file, never recreate the logo.
+Logo file: `/public/protecwiselogo.png` — always use this file, never recreate the logo.
 Two-tone wordmark: "Protec" in #1B3D8B, "Wise" in #4AAE2E.
 ---
 ## ARCHITECTURE RULES
@@ -422,7 +422,7 @@ Impeccable = every component passes ALL of these before it ships:
 □ Mobile-first at 375px — nothing clips, overflows, or becomes unusable
 □ Touch targets minimum 44×44px
 □ Reduced motion respected (prefers-reduced-motion media query)
-□ Logo always from /public/protecwiselogo.jpg — never recreated
+□ Logo always from /public/protecwiselogo.png — never recreated
 □ No placeholder copy — real copy, real data, real states
 ```
 ---
