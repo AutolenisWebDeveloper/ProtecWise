@@ -271,8 +271,8 @@ SENTRY_DSN=
     [x] Error/loading/404 pages                  ← Session 4 (not-found, error boundary, loading)
 [ ] Phase 2 — Consumer Platform (Division 1)
     [x] Public marketing site + product pages   ← Session 5 (homepage 7 sections, 5 product pages, contact + /api/contact, privacy, terms)
-    [ ] CompuLife proxy server
-    [ ] Carrier permission system (buildCOMPINC)
+    [x] CompuLife proxy server                   ← Session 6 (proxy/server.js + /api/compulife/{proxy,states,logos,carriers})
+    [x] Carrier permission system (buildCOMPINC) ← Session 6 (buildCOMPINC wired + 5 Vitest tests; /api/admin/carriers/seed)
     [ ] Quote flow (select → form → results → share)
     [ ] Client portal (magic link auth)
     [ ] Insurance needs calculator

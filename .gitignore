@@ -28,6 +28,10 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# proxy (separate app deployed to the fixed-IP host)
+/proxy/.env
+/proxy/node_modules
+
 # vercel
 .vercel
 
