@@ -273,7 +273,7 @@ SENTRY_DSN=
     [x] Public marketing site + product pages   ← Session 5 (homepage 7 sections, 5 product pages, contact + /api/contact, privacy, terms)
     [x] CompuLife proxy server                   ← Session 6 (proxy/server.js + /api/compulife/{proxy,states,logos,carriers})
     [x] Carrier permission system (buildCOMPINC) ← Session 6 (buildCOMPINC wired + 5 Vitest tests; /api/admin/carriers/seed)
-    [ ] Quote flow (select → form → results → share)
+    [x] Quote flow (select → form → results → share) ← Session 7 (5 pages + 5 API routes; buildCOMPINC→proxy→parse→badges; 12 Vitest tests)
     [ ] Client portal (magic link auth)
     [ ] Insurance needs calculator
     [ ] Application intake (8 steps, autosave)
