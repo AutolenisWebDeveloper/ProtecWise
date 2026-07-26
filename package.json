@@ -16,7 +16,7 @@
     "email:dev": "email dev --dir src/components/emails"
   },
   "dependencies": {
-    "next": "14.2.0",
+    "next": "15.5.21",
     "react": "^18",
     "react-dom": "^18",
     "@supabase/supabase-js": "^2",
@@ -58,7 +58,7 @@
     "libphonenumber-js": "^1",
     "numeral": "^2",
     "nanoid": "^5",
-    "uuid": "^10",
+    "uuid": "^14",
     "lucide-react": "^0.400.0",
     "class-variance-authority": "^0.7",
     "clsx": "^2",
@@ -100,7 +100,7 @@
     "eslint-config-next": "14.2.0",
     "prettier": "^3",
     "prettier-plugin-tailwindcss": "^0.6",
-    "vitest": "^1",
+    "vitest": "^3",
     "@vitejs/plugin-react": "^4",
     "@testing-library/react": "^14",
     "@testing-library/user-event": "^14",
