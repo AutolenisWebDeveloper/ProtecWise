@@ -1,0 +1,86 @@
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn/ui tokens mapped to ProtecWise brand */
+    --background: 0 0% 100%;
+    --foreground: 220 26% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+    --primary: 222 68% 32%; /* #1B3D8B brand navy */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 207 63% 57%; /* #4A9ED6 brand blue */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 101 58% 42%; /* #4AAE2E brand green */
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 68% 32%;
+    --radius: 0.5rem;
+
+    /* Brand direct CSS vars */
+    --brand-navy: #1b3d8b;
+    --brand-navy-hover: #142d6a;
+    --brand-navy-tint: #e8eef9;
+    --brand-green: #4aae2e;
+    --brand-green-hover: #3a9020;
+    --brand-green-tint: #ebf6e5;
+    --brand-blue: #4a9ed6;
+    --brand-blue-hover: #2a7fb8;
+    --brand-blue-tint: #edf5fc;
+  }
+
+  .dark {
+    --background: 220 26% 10%;
+    --foreground: 0 0% 98%;
+    --card: 220 26% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 26% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 207 63% 57%; /* brand blue reads better on dark */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 68% 32%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 101 58% 42%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 9% 65%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 207 63% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Tabular figures for premium/coverage amounts */
+  .font-mono {
+    font-feature-settings: 'tnum';
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
