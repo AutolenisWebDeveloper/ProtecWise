@@ -264,8 +264,8 @@ SENTRY_DSN=
     [x] Project init + packages
     [x] Database migrations (all tables)         ← Session 2 (001–031, 29 tables, RLS, indexes, views)
     [~] Supabase config (auth, storage, RLS)     ← RLS policies done; auth/storage config pending
-    [ ] Core lib (supabase, auth, types)         ← types generated (src/types/supabase.ts + index.ts)
-    [ ] Middleware (RBAC)
+    [x] Core lib (supabase, auth, types)         ← Session 3 (supabase, auth, carriers/buildCOMPINC, email, sms, validations)
+    [x] Middleware (RBAC)                         ← Session 3 (5-portal RBAC via @supabase/ssr)
     [ ] Shared layout components
     [ ] Design system (brand colors, typography)
     [ ] Error/loading/404 pages

@@ -109,3 +109,32 @@ export interface DisclosuresStep {
   signature_ip?: string;
   signature_user_agent?: string;
 }
+
+// ---- Forms Library status (applications.forms_status — added in Session 22b) ----
+export type FormsStatus =
+  | 'not_started'
+  | 'forms_opened'
+  | 'forms_sent'
+  | 'waiting_on_client'
+  | 'submitted';
+
+// ---- Insurance needs calculator result ----
+export interface NeedsCalculatorResult {
+  recommendedCoverage: number;
+  recommendedTermYears: number;
+  breakdown: {
+    incomeReplacement: number;
+    debts: number;
+    finalExpenses: number;
+    education: number;
+    existingCoverage: number;
+    savings: number;
+  };
+}
+
+// ---- Standard API response envelope (matches the api skill) ----
+export type ApiResponse<T> =
+  | { success: true; data: T }
+  | { success: true; message: string }
+  | { error: string; details?: unknown };
+
