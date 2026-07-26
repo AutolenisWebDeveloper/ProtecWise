@@ -266,9 +266,9 @@ SENTRY_DSN=
     [~] Supabase config (auth, storage, RLS)     ← RLS policies done; auth/storage config pending
     [x] Core lib (supabase, auth, types)         ← Session 3 (supabase, auth, carriers/buildCOMPINC, email, sms, validations)
     [x] Middleware (RBAC)                         ← Session 3 (5-portal RBAC via @supabase/ssr)
-    [ ] Shared layout components
-    [ ] Design system (brand colors, typography)
-    [ ] Error/loading/404 pages
+    [x] Shared layout components                 ← Session 4 (public header/footer, agent/admin sidebars, client/candidate/recruiting headers, 6 layout shells)
+    [x] Design system (brand colors, typography) ← Session 4 (typography, premium numbers, buttons, badges, inputs, sidebar nav in globals.css)
+    [x] Error/loading/404 pages                  ← Session 4 (not-found, error boundary, loading)
 [ ] Phase 2 — Consumer Platform (Division 1)
     [ ] Public marketing site + product pages
     [ ] CompuLife proxy server
