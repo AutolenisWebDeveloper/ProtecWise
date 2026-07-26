@@ -194,7 +194,10 @@ if ((quoteCounts?.total_quotes ?? 0) >= limit) {
   );
 }
 
-// Call proxy (NEVER call CompuLife directly)
+// Call proxy (NEVER call CompuLife directly from Vercel)
+// Proxy is running on 34.16.56.64 — the IP registered with CompuLife
+// Dev auth ID: 66b12312b (500 request limit — development only)
+// Production auth ID: stored in COMPULIFE_AUTH_ID on proxy server
 const proxyResponse = await fetch(`${process.env.COMPULIFE_PROXY_URL}/quote`, {
   method: 'POST',
   headers: {
@@ -204,11 +207,24 @@ const proxyResponse = await fetch(`${process.env.COMPULIFE_PROXY_URL}/quote`, {
   body: JSON.stringify({
     requestType: 'request',
     params: {
-      // ... CompuLife params
+      // proxy/server.js injects COMPULIFEAUTHORIZATIONID and REMOTE_IP automatically
+      // DO NOT send these from Next.js — they are server-side secrets on the proxy
       COMPINC: compinc,
+      // ... all other CompuLife params
     }
-  })
+  }),
+  signal: AbortSignal.timeout(20000),
 });
+
+// ALWAYS check for CompuLife auth failure — empty results ≠ no carriers
+const quoteData = await proxyResponse.json();
+if (!quoteData.Compulife_ComparisonResults) {
+  console.error('[quote/run] CompuLife returned no results:', quoteData);
+  return NextResponse.json(
+    { error: 'No quotes available for this profile. Try different inputs or contact an advisor.' },
+    { status: 422 }
+  );
+}
 ```
 
 ## Response Format Standards
