@@ -53,6 +53,7 @@ export type SaveQuoteEmailInput = z.infer<typeof saveQuoteEmailSchema>;
 /** Record an apply-click from a quote (converts intent → application). */
 export const applyClickSchema = z.object({
   quoteId: z.string().uuid(),
-  carrierId: z.string().uuid(),
+  /** CompuLife company+product code of the chosen carrier (results are keyed by it). */
+  carrierCode: z.string().min(1),
 });
 export type ApplyClickInput = z.infer<typeof applyClickSchema>;
