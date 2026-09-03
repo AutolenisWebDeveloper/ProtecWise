@@ -16,7 +16,7 @@
     "email:dev": "email dev --dir src/components/emails"
   },
   "dependencies": {
-    "next": "14.2.35",
+    "next": "15.5.21",
     "react": "^18",
     "react-dom": "^18",
     "@supabase/supabase-js": "^2",
@@ -57,7 +57,7 @@
     "react-phone-number-input": "^3",
     "libphonenumber-js": "^1",
     "numeral": "^2",
-    "nanoid": "^5",
+    "nanoid": "^6",
     "uuid": "^14",
     "lucide-react": "^0.400.0",
     "class-variance-authority": "^0.7",
